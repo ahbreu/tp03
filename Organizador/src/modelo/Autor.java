@@ -1,3 +1,5 @@
+package modelo;
+
 public class Autor extends Pessoa{
 	
 	//Variáveis
@@ -5,24 +7,12 @@ public class Autor extends Pessoa{
 	
 	private Livro[] livrosPublicados;
 	
+	
 	//Métodos
 	
-	public Autor(String nomeAutor) {
-		nome = nomeAutor;
-	}
-	
-	public String toString() {
-    	return "Nome do autor:\n" + nome;
-    }
-	
-	public String getNome() {
-	    	return this.nome;    
-	    }
-	    
-	public void setNome(String nomeLeitor) {
-	    	this.nome = nomeLeitor;
-	    }
-	    
+	public Autor(String nome, String email, String apelido) {
+		super(nome, email, apelido);
+	}  
 	
 	public Livro[] getLivrosPublicados() {
 		return livrosPublicados;
