@@ -2,13 +2,13 @@ package modelo;
 
 public class Autor extends Pessoa{
 	
-	//Variáveis
+	
 	
 	
 	private Livro[] livrosPublicados;
 	
 	
-	//Métodos
+
 	
 	public Autor(String nome, String email, String apelido) {
 		super(nome, email, apelido);

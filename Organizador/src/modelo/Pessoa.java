@@ -2,13 +2,13 @@ package modelo;
 
 public abstract class Pessoa {
 	
-	//Variável da Superclasse Pessoa
+	
 	
 	protected String nome;
 	protected String email;
 	protected String apelido;
 	
-	//Método da Superclasse Pessoa 
+	 
 	
 	public Pessoa(String nome, String email, String apelido) {
 		this.nome = nome;
