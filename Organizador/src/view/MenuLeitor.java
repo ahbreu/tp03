@@ -1,13 +1,20 @@
 package view;
-
+/*
+ * Interface que possibilita o usuario cadastrar dados pessoais para uso do programa
+ * E tambem por essa classe que se acessa a classe de cadastro de livros
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controle.Principal;
+
 import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JScrollBar;
 import javax.swing.JList;
@@ -26,25 +33,12 @@ public class MenuLeitor extends JFrame {
 	private JTextField textField_2;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MenuLeitor frame = new MenuLeitor();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
-	public MenuLeitor() {
+	
+	public DefaultListModel<String> model = new DefaultListModel<>();
+	
+	public MenuLeitor(Principal p, CadastroLivro cadliv, MenuLivro mlv) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 450);
 		contentPane = new JPanel();
@@ -57,45 +51,42 @@ public class MenuLeitor extends JFrame {
 		lblNewLabel.setBounds(10, 11, 218, 31);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("Autores");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				new MenuAutor().setVisible(true);
-				dispose();
-				
-			}
-		});
-		btnNewButton.setBounds(10, 377, 89, 23);
-		contentPane.add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("Temas");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				new MenuTema().setVisible(true);
-				dispose();
-				
-			}
-		});
-		btnNewButton_1.setBounds(109, 377, 89, 23);
-		contentPane.add(btnNewButton_1);
+//		JButton btnNewButton = new JButton("Autores");
+//		btnNewButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				
+//				new MenuAutor().setVisible(true);
+//				dispose();
+//				
+//			}
+//		});
+//		btnNewButton.setBounds(10, 377, 89, 23);
+//		contentPane.add(btnNewButton);
+//		
+//		JButton btnNewButton_1 = new JButton("Temas");
+//		btnNewButton_1.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				
+//				new MenuTema().setVisible(true);
+//				dispose();
+//				
+//			}
+//		});
+//		btnNewButton_1.setBounds(109, 377, 89, 23);
+//		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_3 = new JButton("Menu principal");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				new MenuPrincipal().setVisible(true);
-				dispose();
+				p.visivel();
+				setVisible(false);
 				
 			}
 		});
 		btnNewButton_3.setBounds(307, 377, 117, 23);
 		contentPane.add(btnNewButton_3);
 		
-		JButton btnNewButton_4 = new JButton("Editar dados");
-		btnNewButton_4.setBounds(319, 85, 105, 31);
-		contentPane.add(btnNewButton_4);
 		
 		JLabel lblNewLabel_4 = new JLabel("Livros cadastrados");
 		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 16));
@@ -106,15 +97,15 @@ public class MenuLeitor extends JFrame {
 		btnNewButton_4_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				new CadastroLivro().setVisible(true);
-				dispose();
+				cadliv.setVisible(true);
+				setVisible(false);
 				
 			}
 		});
 		btnNewButton_4_1.setBounds(95, 150, 188, 23);
 		contentPane.add(btnNewButton_4_1);
 		
-		JList list = new JList();
+		JList<String> list = new JList<>( model );
 		list.setBounds(10, 215, 414, 151);
 		contentPane.add(list);
 		
@@ -127,8 +118,8 @@ public class MenuLeitor extends JFrame {
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				new MenuLivro().setVisible(true);
-				dispose();
+				mlv.setVisible(true);
+				setVisible(false);
 				
 			}
 		});

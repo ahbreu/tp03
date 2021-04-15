@@ -1,5 +1,7 @@
 package modelo;
-
+/*
+ * Classe abstrata que origina as classes autor e leitor
+ */
 public abstract class Pessoa {
 	
 	
