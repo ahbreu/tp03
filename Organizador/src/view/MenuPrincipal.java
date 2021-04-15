@@ -1,11 +1,15 @@
 package view;
-
+/*
+ * Nessa interface podem ser acessados os outros menus
+ * E possivel visualizar frases de livros e tambem os livros cadastrados
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -18,27 +22,12 @@ import java.awt.Font;
 public class MenuPrincipal extends JFrame {
 
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MenuPrincipal frame = new MenuPrincipal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
-	public MenuPrincipal() {
+	
+	public DefaultListModel<String> model = new DefaultListModel<>();
+	public DefaultListModel<String> model_1 = new DefaultListModel<>();
+	public JList<String> list = new JList<>( model_1 );
+	public JList<String> list_1 = new JList<>( model );
+	public MenuPrincipal(CadastroLivro cadliv, MenuLeitor ml, MenuLivro mlv) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 400);
 		contentPane = new JPanel();
@@ -50,12 +39,12 @@ public class MenuPrincipal extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				new MenuLivro().setVisible(true);
-				dispose();
+				mlv.setVisible(true);
+				setVisible(false);
 				
 			}
 		});
-		btnNewButton.setBounds(62, 48, 125, 46);
+		btnNewButton.setBounds(62, 64, 125, 46);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("ORGANIZADOR DE LIVROS");
@@ -64,11 +53,10 @@ public class MenuPrincipal extends JFrame {
 		lblNewLabel.setBounds(10, 11, 364, 26);
 		contentPane.add(lblNewLabel);
 		
-		JList list = new JList();
 		list.setBounds(10, 165, 177, 185);
 		contentPane.add(list);
 		
-		JList list_1 = new JList();
+		
 		list_1.setBounds(197, 165, 177, 185);
 		contentPane.add(list_1);
 		
@@ -84,37 +72,12 @@ public class MenuPrincipal extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				new MenuLeitor().setVisible(true);
-				dispose();
+				ml.setVisible(true);
+				setVisible(false);
 				
 			}
 		});
-		btnNewButton_1.setBounds(197, 95, 125, 46);
+		btnNewButton_1.setBounds(197, 64, 125, 46);
 		contentPane.add(btnNewButton_1);
-		
-		JButton btnTemas = new JButton("Temas");
-		btnTemas.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				new MenuTema().setVisible(true);
-				dispose();
-				
-			}
-		});
-		btnTemas.setBounds(197, 48, 125, 46);
-		contentPane.add(btnTemas);
-		
-		JButton btnMenuDosAutores = new JButton("Autores");
-		btnMenuDosAutores.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				new MenuAutor().setVisible(true);
-				dispose();
-				
-			}
-		});
-		btnMenuDosAutores.setBounds(62, 95, 125, 46);
-		contentPane.add(btnMenuDosAutores);
 	}
-
 }

@@ -1,7 +1,9 @@
 package modelo;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+/*
+ * Classe que contém informações privadas dos livros
+ */
 public class Livro {
 	
 	
@@ -9,6 +11,7 @@ public class Livro {
 	private String titulo;
 	private int anoPublicacao;
 	private String descricao;
+	private String autor;
 	SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
 	String dataCadastro = data.format(new Date());
 	
@@ -52,5 +55,11 @@ public class Livro {
 	}
 	public void setDataCadastro(String dataCadastro) {
 		this.dataCadastro = dataCadastro;
+	}
+	public void setAutor( String autor ) {
+		this.autor = autor;
+	}
+	public String getAutor() {
+		return autor;
 	}
 	}

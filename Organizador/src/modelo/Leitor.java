@@ -5,7 +5,6 @@ public class Leitor extends Pessoa {
 	
 	protected int qtMaxima = 1000;
     protected Livro[] livrosCadastrados = new Livro[qtMaxima];
-    protected Tema[] temasCadastrados = new Tema[qtMaxima];
     public boolean[] lido = new boolean[qtMaxima];
     {
     for(int i = 0; i < qtMaxima; i++) {
