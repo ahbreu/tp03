@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Livro {
 	
-	//Variáveis
+	
 	
 	private String titulo;
 	private int anoPublicacao;
@@ -12,7 +12,7 @@ public class Livro {
 	SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
 	String dataCadastro = data.format(new Date());
 	
-	//Métodos
+	
 	
 	public Livro(String tituloLivro, int anoPublicacaoLivro, String descricaoLivro, String dataCadastroLivro) {
 		titulo = tituloLivro;

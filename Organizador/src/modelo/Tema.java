@@ -1,13 +1,13 @@
 package modelo;
 public class Tema {
 	
-	//Variáveis
+	
 	
 	private String nomeTema;
 	private Livro[] tituloLivro;
 	
 	
-	//Métodos
+	
 	
 	public Tema(String nomeTema, Livro[] tituloLivro) {
 		 this.nomeTema = nomeTema;
