@@ -14,6 +14,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+import controle.*;
+
 public class MenuLivro extends JFrame {
 
 	private JPanel contentPane;
@@ -53,6 +55,8 @@ public class MenuLivro extends JFrame {
 		JList list = new JList();
 		list.setBounds(10, 78, 414, 288);
 		contentPane.add(list);
+		
+			
 		
 		JLabel lblNewLabel = new JLabel("LIVROS");
 		lblNewLabel.setFont(new Font("Arial Black", Font.BOLD, 20));
@@ -106,10 +110,6 @@ public class MenuLivro extends JFrame {
 		});
 		btnTemas_1.setBounds(208, 377, 89, 23);
 		contentPane.add(btnTemas_1);
-		
-		Choice choice = new Choice();
-		choice.setBounds(256, 53, 168, 20);
-		contentPane.add(choice);
 		
 	}
 

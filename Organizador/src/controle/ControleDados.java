@@ -22,14 +22,6 @@ public class ControleDados {
 		 return this.d.getQtdAutores();
 	 }
 	
-	public Leitor[] getLeitores() {
-		return this.d.getLeitores();
-	}
-	
-	public int getQtdLeitores() {
-		return this.d.getQtdLeitores();
-	}
-	
 	public Livro[] getLivros() {
 		return this.d.getLivros();
 	}
@@ -46,10 +38,33 @@ public class ControleDados {
 		return this.getQtdTemas();
 	}
 	
+	public Leitor getLeitor() {
+		return this.getLeitor();
+	}
+	
+	public void setLeitor(Leitor l) {
+		d.setLeitor(l);
+	}
+	
+	public void adicionarLivro(Livro l) {
+		d.livros[d.getQtdLivros()] =l;
+		d.setQtdLivros(d.getQtdLivros()+1);
+	}
+	
+	public void adicionarAutor(Autor a) {
+		d.autores[d.getQtdAutores()] = a;
+		d.setQtdAutores(d.getQtdAutores()+1);
+	}
+	
+	public void adicionarTema(Tema t) {
+		d.temas[d.getQtdTemas()] = t;
+		d.setQtdTemas(d.getQtdTemas()+1);
+	}
+	
 	public boolean removerLivro(int i) {
 		String livroRemovido = d.getLivros()[i].getTitulo();
 		if (i == (d.getQtdLivros() - 1)) { // O livro a ser removido está no final do array
-			d.setQtdLvros(d.getQtdLivros() - 1);
+			d.setQtdLivros(d.getQtdLivros() - 1);
 			d.getLivros()[d.getQtdLivros()] = null;
 			return true;
 		} else { // O livro a ser removido está no meio do array
@@ -63,7 +78,7 @@ public class ControleDados {
 					d.getLivros()[j] = d.getLivros()[j+1];
 				}
 				d.getLivros()[d.getQtdLivros()] = null;
-				d.setQtdLvros(d.getQtdLivros() - 1);
+				d.setQtdLivros(d.getQtdLivros() - 1);
 				return true;
 		}
 }

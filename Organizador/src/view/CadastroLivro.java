@@ -22,11 +22,11 @@ import javax.swing.JRadioButton;
 public class CadastroLivro extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField tituloLivro;
+	private JTextField autorLivro;
+	private JTextField dataPubliLivro;
+	private JTextField temaLivro;
+	private JTextField descLivro;
 
 	/**
 	 * Launch the application.
@@ -60,25 +60,26 @@ public class CadastroLivro extends JFrame {
 		lblNewLabel.setBounds(10, 11, 335, 31);
 		contentPane.add(lblNewLabel);
 		
-		textField = new JTextField();
-		textField.setBounds(95, 53, 329, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		tituloLivro = new JTextField();
+		tituloLivro.setBounds(95, 53, 329, 20);
+		contentPane.add(tituloLivro);
+		tituloLivro.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(95, 84, 329, 20);
-		contentPane.add(textField_1);
+		autorLivro = new JTextField();
+		autorLivro.setText("Julio Verne");
+		autorLivro.setColumns(10);
+		autorLivro.setBounds(95, 84, 329, 20);
+		contentPane.add(autorLivro);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(129, 115, 295, 20);
-		contentPane.add(textField_2);
+		dataPubliLivro = new JTextField();
+		dataPubliLivro.setColumns(10);
+		dataPubliLivro.setBounds(129, 115, 295, 20);
+		contentPane.add(dataPubliLivro);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(129, 146, 295, 20);
-		contentPane.add(textField_3);
+		temaLivro = new JTextField();
+		temaLivro.setColumns(10);
+		temaLivro.setBounds(129, 146, 295, 20);
+		contentPane.add(temaLivro);
 		
 		JButton btnNewButton = new JButton("Cadastrar livro");
 		btnNewButton.setBounds(10, 235, 121, 23);
@@ -120,10 +121,10 @@ public class CadastroLivro extends JFrame {
 		rdbtnNoLido.setBounds(300, 180, 63, 23);
 		contentPane.add(rdbtnNoLido);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(10, 284, 242, 116);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
+		descLivro = new JTextField();
+		descLivro.setBounds(10, 284, 242, 116);
+		contentPane.add(descLivro);
+		descLivro.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Descri\u00E7\u00E3o do livro");
 		lblNewLabel_2.setBounds(10, 269, 240, 14);
