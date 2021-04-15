@@ -2,14 +2,13 @@ package modelo;
 import java.util.*;
 
 public class Dados {
-	private Autor[] autores = new Autor[50];
+	public Autor[] autores = new Autor[50];
 	private int qtdAutores = 0;
-	private Leitor[] leitores = new Leitor[50];
-	private int qtdLeitores = 0;
-	private Livro[] livros = new Livro[50];
+	public Livro[] livros = new Livro[50];
 	private int qtdLivros = 0;
-	private Tema[] temas = new Tema[50];
+	public Tema[] temas = new Tema[50];
 	private int qtdTemas = 0;
+	private Leitor leitor;
 	
 	
 	public void inserirDados() {
@@ -17,13 +16,11 @@ public class Dados {
 		Date d = Calendar.getInstance().getTime();
 		for (int i = 0; i < 4; i++) {
 			autores[i] = new Autor("Autor"+i, "Email"+i, "Apelido"+i);
-			leitores[i] = new Leitor("Leitor"+i, "Email"+i, "Apelido"+i);
 			livros[i] = new Livro();
 			temas[i] = new Tema("Tema"+i);
 		}
 		
 		qtdAutores = 4;
-		qtdLeitores = 4;
 		qtdLivros = 4;
 		qtdTemas = 4;
 	}
@@ -49,22 +46,6 @@ public class Dados {
 		this.qtdAutores = qtdAutores;
 	}
 	
-	public Leitor[] getLeitores() {
-		return leitores;
-	}
-	
-	public void setLeitores(Leitor[] leitores) {
-		this.leitores = leitores;
-	}
-	
-	public int getQtdLeitores() {
-		return qtdLeitores;
-	}
-	
-	public void setQtdLeitores(int qtdLeitores) {
-		this.qtdLeitores = qtdLeitores;
-	}
-	
 	public Livro[] getLivros() {
 		return livros;
 	}
@@ -82,7 +63,7 @@ public class Dados {
 		return qtdLivros;
 	}
 	
-	public void setQtdLvros(int qtdLivros) {
+	public void setQtdLivros(int qtdLivros) {
 		this.qtdLivros = qtdLivros;
 	}
 	
@@ -101,4 +82,13 @@ public class Dados {
 	public void setQtdTemas(int qtdTemas) {
 		this.qtdTemas = qtdTemas;
 	}
+	
+	public Leitor getLeitor() {
+		return leitor;
+	}
+	
+	public void setLeitor(Leitor leitor) {
+		this.leitor = leitor;
+	}
+	
 }
