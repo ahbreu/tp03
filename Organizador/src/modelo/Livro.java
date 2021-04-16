@@ -56,10 +56,4 @@ public class Livro {
 	public void setDataCadastro(String dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
-	public void setAutor( String autor ) {
-		this.autor = autor;
-	}
-	public String getAutor() {
-		return autor;
-	}
 	}

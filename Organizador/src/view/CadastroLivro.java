@@ -47,10 +47,10 @@ public class CadastroLivro extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("CADASTRAR/EDITAR LIVROS");
-		lblNewLabel.setFont(new Font("Arial Black", Font.BOLD, 20));
-		lblNewLabel.setBounds(10, 11, 335, 31);
-		contentPane.add(lblNewLabel);
+		JLabel menu = new JLabel("CADASTRAR/EDITAR LIVROS");
+		menu.setFont(new Font("Arial Black", Font.BOLD, 20));
+		menu.setBounds(10, 11, 335, 31);
+		contentPane.add(menu);
 		
 		tituloLivro = new JTextField();
 		tituloLivro.setBounds(95, 53, 329, 20);
@@ -72,9 +72,9 @@ public class CadastroLivro extends JFrame {
 		contentPane.add(descLivro);
 		descLivro.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Cadastrar livro");
-		btnNewButton.setBounds(10, 143, 121, 23);
-		btnNewButton.addActionListener(new ActionListener() {			
+		JButton botaoCadastrar = new JButton("Cadastrar livro");
+		botaoCadastrar.setBounds(10, 143, 121, 23);
+		botaoCadastrar.addActionListener(new ActionListener() {			
 			public void actionPerformed(ActionEvent e ) {
 				p.cadastrar(new Livro(tituloLivro.getText(), Integer.parseInt(dataPubliLivro.getText()), descLivro.getText(), dataCadastro));
 				p.mp.model.addElement(tituloLivro.getText());
@@ -83,26 +83,26 @@ public class CadastroLivro extends JFrame {
 				p.mp.model_1.addElement(descLivro.getText());
 			}
 		});
-		contentPane.add(btnNewButton);
+		contentPane.add(botaoCadastrar);
 		
-		JLabel lblNewLabel_1 = new JLabel("T\u00EDtulo:");
-		lblNewLabel_1.setBounds(7, 56, 88, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel titulo = new JLabel("T\u00EDtulo:");
+		titulo.setBounds(7, 56, 88, 14);
+		contentPane.add(titulo);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Autor:");
-		lblNewLabel_1_1.setBounds(7, 87, 88, 14);
-		contentPane.add(lblNewLabel_1_1);
+		JLabel autor = new JLabel("Autor:");
+		autor.setBounds(7, 87, 88, 14);
+		contentPane.add(autor);
 		
-		JLabel lblNewLabel_1_2 = new JLabel("Data de publica\u00E7\u00E3o(DDMMAAA):");
-		lblNewLabel_1_2.setBounds(7, 118, 243, 14);
-		contentPane.add(lblNewLabel_1_2);
+		JLabel dataPubli = new JLabel("Data de publica\u00E7\u00E3o(DDMMAAA):");
+		dataPubli.setBounds(7, 118, 243, 14);
+		contentPane.add(dataPubli);
 		
-		JLabel lblNewLabel_2 = new JLabel("Descri\u00E7\u00E3o do livro");
-		lblNewLabel_2.setBounds(10, 177, 240, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel descricao = new JLabel("Descri\u00E7\u00E3o do livro");
+		descricao.setBounds(10, 177, 240, 14);
+		contentPane.add(descricao);
 		
-		JButton btnNewButton_1 = new JButton("Menu principal");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton botaoMp = new JButton("Menu principal");
+		botaoMp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				p.visivel();
@@ -111,47 +111,12 @@ public class CadastroLivro extends JFrame {
 				
 			}
 		});
-		btnNewButton_1.setBounds(315, 329, 109, 23);
-		contentPane.add(btnNewButton_1);
+		botaoMp.setBounds(315, 329, 109, 23);
+		contentPane.add(botaoMp);
 		
-		JCheckBox chckbxNewCheckBox = new JCheckBox("Lido");
-		chckbxNewCheckBox.setBounds(327, 142, 97, 23);
-		contentPane.add(chckbxNewCheckBox);
+		JCheckBox checkLido = new JCheckBox("Lido");
+		checkLido.setBounds(327, 142, 97, 23);
+		contentPane.add(checkLido);
 		
-//		JButton btnNewButton_1_1 = new JButton("Menu do leitor");
-//		btnNewButton_1_1.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				
-//				new MenuLeitor().setVisible(true);
-//				dispose();
-//				
-//			}
-//		});
-//		btnNewButton_1_1.setBounds(315, 343, 109, 23);
-//		contentPane.add(btnNewButton_1_1);
-//		
-//		JButton btnNewButton_1_2 = new JButton("Autores");
-//		btnNewButton_1_2.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				
-//				new MenuAutor().setVisible(true);
-//				dispose();
-//				
-//			}
-//		});
-//		btnNewButton_1_2.setBounds(315, 309, 109, 23);
-//		contentPane.add(btnNewButton_1_2);
-//		
-//		JButton btnNewButton_1_3 = new JButton("Livros");
-//		btnNewButton_1_3.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				
-//				new MenuLivro().setVisible(true);
-//				dispose();
-//				
-//			}
-//		});
-//		btnNewButton_1_3.setBounds(315, 275, 109, 23);
-//		contentPane.add(btnNewButton_1_3);
 	}
 }

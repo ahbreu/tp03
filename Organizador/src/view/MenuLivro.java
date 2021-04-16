@@ -31,36 +31,22 @@ public class MenuLivro extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel_4 = new JLabel("Livros cadastrados");
-		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 16));
-		lblNewLabel_4.setBounds(10, 53, 168, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel livrosCad = new JLabel("Livros cadastrados");
+		livrosCad.setFont(new Font("Arial", Font.PLAIN, 16));
+		livrosCad.setBounds(10, 53, 168, 14);
+		contentPane.add(livrosCad);
 		
-		JList<String> list = new JList<>( model );
-		list.setBounds(10, 78, 414, 288);
-		contentPane.add(list);
+		JList<String> listaLivros = new JList<>( model );
+		listaLivros.setBounds(10, 78, 414, 288);
+		contentPane.add(listaLivros);
 		
-			
-		
-		JLabel lblNewLabel = new JLabel("LIVROS");
-		lblNewLabel.setFont(new Font("Arial Black", Font.BOLD, 20));
-		lblNewLabel.setBounds(10, 11, 218, 31);
-		contentPane.add(lblNewLabel);
-		
-//		JButton btnAutores = new JButton("Autores");
-//		btnAutores.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				
-//				new MenuAutor().setVisible(true);
-//				dispose();
-//				
-//			}
-//		});
-//		btnAutores.setBounds(10, 377, 89, 23);
-//		contentPane.add(btnAutores);
-		
-		JButton btnMenuPrincipal = new JButton("Menu principal");
-		btnMenuPrincipal.addActionListener(new ActionListener() {
+		JLabel menu = new JLabel("LIVROS");
+		menu.setFont(new Font("Arial Black", Font.BOLD, 20));
+		menu.setBounds(10, 11, 218, 31);
+		contentPane.add(menu);
+				
+		JButton botaoMp = new JButton("Menu principal");
+		botaoMp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				p.visivel();
@@ -68,33 +54,8 @@ public class MenuLivro extends JFrame {
 				
 			}
 		});
-		btnMenuPrincipal.setBounds(303, 377, 121, 23);
-		contentPane.add(btnMenuPrincipal);
-		
-//		JButton btnTemas = new JButton("Temas");
-//		btnTemas.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				
-//				new MenuTema().setVisible(true);
-//				dispose();
-//				
-//			}
-//		});
-//		btnTemas.setBounds(109, 377, 89, 23);
-//		contentPane.add(btnTemas);
-		
-//		JButton btnTemas_1 = new JButton("Leitor");
-//		btnTemas_1.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				
-//				new MenuLeitor().setVisible(true);
-//				dispose();
-//				
-//			}
-//		});
-//		btnTemas_1.setBounds(208, 377, 89, 23);
-//		contentPane.add(btnTemas_1);
-		
+		botaoMp.setBounds(303, 377, 121, 23);
+		contentPane.add(botaoMp);		
 	}
 
 }

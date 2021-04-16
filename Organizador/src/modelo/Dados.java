@@ -13,10 +13,6 @@ public class Dados {
 		return livros;
 	}
 	
-	public void setAutores(Livro[] livros) {
-		this.livros = livros;
-	}
-	
 	public void inserirEditarLivro(Livro l, int pos) {
 		this.livros[pos] = l;
 		if(pos == qtdLivros) qtdLivros++;

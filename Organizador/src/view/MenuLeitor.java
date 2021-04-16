@@ -28,9 +28,9 @@ import java.awt.event.ActionEvent;
 public class MenuLeitor extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField txtNome;
+	private JTextField txtEmail;
+	private JTextField txtApelido;
 
 	/**
 	 * Create the frame.
@@ -46,37 +46,13 @@ public class MenuLeitor extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("MENU DO LEITOR");
-		lblNewLabel.setFont(new Font("Arial Black", Font.BOLD, 20));
-		lblNewLabel.setBounds(10, 11, 218, 31);
-		contentPane.add(lblNewLabel);
-		
-//		JButton btnNewButton = new JButton("Autores");
-//		btnNewButton.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				
-//				new MenuAutor().setVisible(true);
-//				dispose();
-//				
-//			}
-//		});
-//		btnNewButton.setBounds(10, 377, 89, 23);
-//		contentPane.add(btnNewButton);
-//		
-//		JButton btnNewButton_1 = new JButton("Temas");
-//		btnNewButton_1.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				
-//				new MenuTema().setVisible(true);
-//				dispose();
-//				
-//			}
-//		});
-//		btnNewButton_1.setBounds(109, 377, 89, 23);
-//		contentPane.add(btnNewButton_1);
-		
-		JButton btnNewButton_3 = new JButton("Menu principal");
-		btnNewButton_3.addActionListener(new ActionListener() {
+		JLabel menu = new JLabel("MENU DO LEITOR");
+		menu.setFont(new Font("Arial Black", Font.BOLD, 20));
+		menu.setBounds(10, 11, 218, 31);
+		contentPane.add(menu);
+			
+		JButton botaoMp = new JButton("Menu principal");
+		botaoMp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				p.visivel();
@@ -84,17 +60,17 @@ public class MenuLeitor extends JFrame {
 				
 			}
 		});
-		btnNewButton_3.setBounds(307, 377, 117, 23);
-		contentPane.add(btnNewButton_3);
+		botaoMp.setBounds(307, 377, 117, 23);
+		contentPane.add(botaoMp);
 		
 		
-		JLabel lblNewLabel_4 = new JLabel("Livros cadastrados");
-		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 16));
-		lblNewLabel_4.setBounds(10, 190, 168, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel livrosCad = new JLabel("Livros cadastrados");
+		livrosCad.setFont(new Font("Arial", Font.PLAIN, 16));
+		livrosCad.setBounds(10, 190, 168, 14);
+		contentPane.add(livrosCad);
 		
-		JButton btnNewButton_4_1 = new JButton("Cadastrar livro novo");
-		btnNewButton_4_1.addActionListener(new ActionListener() {
+		JButton botaoCadastrar = new JButton("Cadastrar livro novo");
+		botaoCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				cadliv.setVisible(true);
@@ -102,20 +78,20 @@ public class MenuLeitor extends JFrame {
 				
 			}
 		});
-		btnNewButton_4_1.setBounds(95, 150, 188, 23);
-		contentPane.add(btnNewButton_4_1);
+		botaoCadastrar.setBounds(95, 150, 188, 23);
+		contentPane.add(botaoCadastrar);
 		
-		JList<String> list = new JList<>( model );
-		list.setBounds(10, 215, 414, 151);
-		contentPane.add(list);
+		JList<String> listaLivros = new JList<>( model );
+		listaLivros.setBounds(10, 215, 414, 151);
+		contentPane.add(listaLivros);
 		
-		Choice choice = new Choice();
-		choice.setFont(new Font("Arial", Font.PLAIN, 12));
-		choice.setBounds(242, 192, 182, 20);
-		contentPane.add(choice);
+		Choice filtro = new Choice();
+		filtro.setFont(new Font("Arial", Font.PLAIN, 12));
+		filtro.setBounds(242, 192, 182, 20);
+		contentPane.add(filtro);
 		
-		JButton btnNewButton_1_1 = new JButton("Livros");
-		btnNewButton_1_1.addActionListener(new ActionListener() {
+		JButton botaoLivroMenu = new JButton("Livros");
+		botaoLivroMenu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				mlv.setVisible(true);
@@ -123,34 +99,34 @@ public class MenuLeitor extends JFrame {
 				
 			}
 		});
-		btnNewButton_1_1.setBounds(208, 377, 89, 23);
-		contentPane.add(btnNewButton_1_1);
+		botaoLivroMenu.setBounds(208, 377, 89, 23);
+		contentPane.add(botaoLivroMenu);
 		
-		textField = new JTextField();
-		textField.setBounds(73, 53, 239, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtNome = new JTextField();
+		txtNome.setBounds(73, 53, 239, 20);
+		contentPane.add(txtNome);
+		txtNome.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(73, 85, 239, 20);
-		contentPane.add(textField_1);
+		txtEmail = new JTextField();
+		txtEmail.setColumns(10);
+		txtEmail.setBounds(73, 85, 239, 20);
+		contentPane.add(txtEmail);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(73, 119, 239, 20);
-		contentPane.add(textField_2);
+		txtApelido = new JTextField();
+		txtApelido.setColumns(10);
+		txtApelido.setBounds(73, 119, 239, 20);
+		contentPane.add(txtApelido);
 		
-		JLabel lblNewLabel_1 = new JLabel("Nome:");
-		lblNewLabel_1.setBounds(10, 53, 77, 20);
-		contentPane.add(lblNewLabel_1);
+		JLabel nomeLeitor = new JLabel("Nome:");
+		nomeLeitor.setBounds(10, 53, 77, 20);
+		contentPane.add(nomeLeitor);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("E-mail:");
-		lblNewLabel_1_1.setBounds(10, 85, 77, 20);
-		contentPane.add(lblNewLabel_1_1);
+		JLabel emailLeitor = new JLabel("E-mail:");
+		emailLeitor.setBounds(10, 85, 77, 20);
+		contentPane.add(emailLeitor);
 		
-		JLabel lblNewLabel_1_2 = new JLabel("Apelido:");
-		lblNewLabel_1_2.setBounds(10, 119, 77, 20);
-		contentPane.add(lblNewLabel_1_2);
+		JLabel apelidoLeitor = new JLabel("Apelido:");
+		apelidoLeitor.setBounds(10, 119, 77, 20);
+		contentPane.add(apelidoLeitor);
 	}
 }
