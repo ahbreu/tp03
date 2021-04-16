@@ -25,8 +25,8 @@ public class MenuPrincipal extends JFrame {
 	
 	public DefaultListModel<String> model = new DefaultListModel<>();
 	public DefaultListModel<String> model_1 = new DefaultListModel<>();
-	public JList<String> list = new JList<>( model_1 );
-	public JList<String> list_1 = new JList<>( model );
+	public JList<String> listaDesc = new JList<>( model_1 );
+	public JList<String> listaRanking = new JList<>( model );
 	public MenuPrincipal(CadastroLivro cadliv, MenuLeitor ml, MenuLivro mlv) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 400);
@@ -35,8 +35,8 @@ public class MenuPrincipal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Livros");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton botaoLivros = new JButton("Livros");
+		botaoLivros.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				mlv.setVisible(true);
@@ -44,32 +44,32 @@ public class MenuPrincipal extends JFrame {
 				
 			}
 		});
-		btnNewButton.setBounds(62, 64, 125, 46);
-		contentPane.add(btnNewButton);
+		botaoLivros.setBounds(62, 64, 125, 46);
+		contentPane.add(botaoLivros);
 		
-		JLabel lblNewLabel = new JLabel("ORGANIZADOR DE LIVROS");
-		lblNewLabel.setFont(new Font("Arial Black", Font.BOLD, 20));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(10, 11, 364, 26);
-		contentPane.add(lblNewLabel);
+		JLabel menuNome = new JLabel("ORGANIZADOR DE LIVROS");
+		menuNome.setFont(new Font("Arial Black", Font.BOLD, 20));
+		menuNome.setHorizontalAlignment(SwingConstants.CENTER);
+		menuNome.setBounds(10, 11, 364, 26);
+		contentPane.add(menuNome);
 		
-		list.setBounds(10, 165, 177, 185);
-		contentPane.add(list);
+		listaDesc.setBounds(10, 165, 177, 185);
+		contentPane.add(listaDesc);
 		
 		
-		list_1.setBounds(197, 165, 177, 185);
-		contentPane.add(list_1);
+		listaRanking.setBounds(197, 165, 177, 185);
+		contentPane.add(listaRanking);
 		
-		JLabel lblNewLabel_1 = new JLabel("Descri\u00E7\u00F5es de livros cadastrados");
-		lblNewLabel_1.setBounds(10, 152, 177, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel descLivrosCad = new JLabel("Descri\u00E7\u00F5es de livros cadastrados");
+		descLivrosCad.setBounds(10, 152, 177, 14);
+		contentPane.add(descLivrosCad);
 		
-		JLabel lblNewLabel_2 = new JLabel("Ranking dos livros cadastrados");
-		lblNewLabel_2.setBounds(197, 152, 177, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel rankingLivrosCad = new JLabel("Ranking dos livros cadastrados");
+		rankingLivrosCad.setBounds(197, 152, 177, 14);
+		contentPane.add(rankingLivrosCad);
 		
-		JButton btnNewButton_1 = new JButton("Menu do leitor");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton botaoMenuLeitor = new JButton("Menu do leitor");
+		botaoMenuLeitor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				ml.setVisible(true);
@@ -77,7 +77,7 @@ public class MenuPrincipal extends JFrame {
 				
 			}
 		});
-		btnNewButton_1.setBounds(197, 64, 125, 46);
-		contentPane.add(btnNewButton_1);
+		botaoMenuLeitor.setBounds(197, 64, 125, 46);
+		contentPane.add(botaoMenuLeitor);
 	}
 }
