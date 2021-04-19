@@ -11,7 +11,6 @@ public class Livro {
 	private String titulo;
 	private int anoPublicacao;
 	private String descricao;
-	private String autor;
 	SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
 	String dataCadastro = data.format(new Date());
 	

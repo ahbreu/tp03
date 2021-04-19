@@ -1,7 +1,10 @@
 package view;
-/*
+/**
  * Interface que possibilita o usuario cadastrar dados pessoais para uso do programa
  * E tambem por essa classe que se acessa a classe de cadastro de livros
+ * @author Pedro Abreu
+ * @version 1.0 (Abr 2021)
+ *
  */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -31,10 +34,6 @@ public class MenuLeitor extends JFrame {
 	private JTextField txtNome;
 	private JTextField txtEmail;
 	private JTextField txtApelido;
-
-	/**
-	 * Create the frame.
-	 */
 	
 	public DefaultListModel<String> model = new DefaultListModel<>();
 	

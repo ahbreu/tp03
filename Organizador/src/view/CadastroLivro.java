@@ -1,6 +1,9 @@
 package view;
-/*
+/**
  * Interface que possibilita o cadastro de novos livros
+ * @author Pedro Abreu
+ * @version 1.0 (Abr 2021)
+ *
  */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

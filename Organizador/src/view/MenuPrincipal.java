@@ -1,7 +1,10 @@
 package view;
-/*
+/**
  * Nessa interface podem ser acessados os outros menus
  * E possivel visualizar frases de livros e tambem os livros cadastrados
+ * @author Pedro Abreu
+ * @version 1.0 (Abr 2021)
+ *
  */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

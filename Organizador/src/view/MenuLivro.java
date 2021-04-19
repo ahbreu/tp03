@@ -1,6 +1,9 @@
 package view;
-/*
+/**
  * Por essa interface e possivel ver quais são os livros cadastrados no programa
+ * @author Pedro Abreu
+ * @version 1.0 (Abr 2021)
+ *
  */
 import java.awt.BorderLayout;
 import java.awt.Choice;
