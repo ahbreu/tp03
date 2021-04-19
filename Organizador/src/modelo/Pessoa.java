@@ -1,6 +1,9 @@
 package modelo;
-/*
- * Classe abstrata que origina as classes autor e leitor
+/**
+ * Classe abstrata que origina a classe Leitor
+ * @author Pedro Abreu
+ * @version 1.0 (Abr 2021)
+ *
  */
 public abstract class Pessoa {
 	

@@ -1,7 +1,10 @@
 package modelo;
 import java.util.*;
-/*
- * Classe onde se encoontram todos os dados do programa
+/**
+ * Classe onde se encontram todos os dados do programa
+ * @author Pedro Abreu
+ * @version 1.0 (Abr 2021)
+ *
  */
 public class Dados {
 	public Livro[] livros = new Livro[50];

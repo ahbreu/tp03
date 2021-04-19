@@ -1,8 +1,11 @@
 package controle;
 import modelo.*;
 
-/*
+/**
  * Classe que controla todos os cadastros
+ * @author Pedro Abreu
+ * @version 1.0 (Abr 2021)
+ *
  */
 public class ControleDados {
 	private Dados d = new Dados();
