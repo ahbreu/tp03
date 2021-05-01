@@ -37,7 +37,6 @@ public class CadastroLivro extends JFrame {
 	private JTextField tituloLivro;
 	private JTextField autorLivro;
 	private JTextField dataPubliLivro;
-	private JTextField temaLivro;
 	private JTextField descLivro;
 	SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
 	String dataCadastro = data.format(new Date());
