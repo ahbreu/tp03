@@ -4,15 +4,12 @@ public class Leitor extends Pessoa {
 
 	
 	protected int qtMaxima = 1000;
-    protected Livro[] livrosCadastrados = new Livro[qtMaxima];
     public boolean[] lido = new boolean[qtMaxima];
     {
     for(int i = 0; i < qtMaxima; i++) {
     	lido[i] = true;
     }}
     public int qt_livros_cad;
-    public String consultarLivrosCadastrados;
-	public String consultarTemasCadastrados;
 	
 	
     public Leitor(String nome, String email, String apelido){
@@ -27,13 +24,5 @@ public class Leitor extends Pessoa {
     
     public void setNome(String nomeLeitor) {
     	this.nome = nomeLeitor;
-    }
-    
-    public Livro[] getLivro(){
-    	return this.livrosCadastrados;
-    }
-    
-    public void setLivro(Livro[] livrosCadastrados) {
-    	this.livrosCadastrados = livrosCadastrados;
     }
 }
